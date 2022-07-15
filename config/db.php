@@ -120,18 +120,73 @@ return [
     [
         [
             "type" => "bronze",
-            "duration" => 24,
+            "duration" => "24",
             "price" => 2.99
         ],
         [
             "type" => "silver",
-            "duration" => 72,
+            "duration" => "72",
             "price" => 5.99
         ],
         [
             "type" => "gold",
-            "duration" => 144,
+            "duration" => "144",
             "price" => 9.99
         ]
+    ],
+    "services" =>
+    [
+        [
+            "name" => "Wifi",
+            "icon" => "fa-house"
+        ],
+        [
+            "name" => "Colazione",
+            "icon" => "fa-pancakes"
+        ],
+        [
+            "name" => "Aria condizionata",
+            "icon" => "fa-snowflake"
+        ],
+        [
+            "name" => "Cucina",
+            "icon" => "fa-house"
+        ],
+        [
+            "name" => "Garage",
+            "icon" => "fa-garage-car"
+        ],
+        [
+            "name" => "Parcheggio privato",
+            "icon" => "fa-circle-parking"
+        ],
+        [
+            "name" => "Vista mare",
+            "icon" => "fa-solid fa-house"
+        ],
+        [
+            "name" => "Lavatrice",
+            "icon" => "fa-washing-machine"
+        ],
+        [
+            "name" => "TV",
+            "icon" => "fa-tv"
+        ],
+        [
+            "name" => "Frigo",
+            "icon" => "fa-refrigerator"
+        ],
+        [
+            "name" => "Animali",
+            "icon" => "fa-paw"
+        ],
+        [
+            "name" => "Microonde",
+            "icon" => "fa-microwave"
+        ],
+        [
+            "name" => "Self check-in",
+            "icon" => "fa-building-circle-check"
+        ],
     ]
 ];
