@@ -53,100 +53,65 @@
             </div>
         </div>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <h3>Candidates</h3>
+            <h3>Inbox</h3>
             <hr>
             <div class="table-responsive">
                 <table class="table table-dark">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Position</th>
+                            <th scope="col">From</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Message</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
                             <td>John</td>
-                            <td>Doe</td>
-                            <td>Back-end developer</td>
+                            <td>10/07/22</td>
+                            <td>I want book your apartment...</td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Raghunandan</td>
-                            <td>Vempati</td>
-                            <td>JS developer</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Suresh</td>
-                            <td>Mohan</td>
-                            <td>Project Manager</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Syam</td>
-                            <td>Babu</td>
-                            <td>Scrum master</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Karthik</td>
-                            <td>Ravichandran</td>
-                            <td>Back-end developer</td>
+                            <td>John</td>
+                            <td>10/07/22</td>
+                            <td>I want book your apartment...</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h3>Invoice</h3>
+            <h3>Booking</h3>
             <hr>
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Invoice #184382</h5>
+                            <h5 class="card-title">#184382</h5>
+                            <p>Start date</p>
+                            <p>End date</p>
                             <p class="card-text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
                                 mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                            <a href="#" class="btn btn-info">Print</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Invoice #184386</h5>
+                            <h5 class="card-title">#184382</h5>
+                            <p>Start date</p>
+                            <p>End date</p>
                             <p class="card-text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
                                 mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                            <a href="#" class="btn btn-info">Print</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Invoice #184389</h5>
-                            <p class="card-text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
-                                mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                            <a href="#" class="btn btn-info">Print</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Invoice #184391</h5>
-                            <p class="card-text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
-                                mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                            <a href="#" class="btn btn-info">Print</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
         </main>
     </div>
