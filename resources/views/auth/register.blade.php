@@ -67,9 +67,9 @@
                         </div>
                     </div>
 
-                    <div class="form-group w-100 pt-5">
-                        <div class="">
-                            <button type="submit" class="btn btn-light text-danger fw-bold w-100">
+                    <div class="form-group pt-5">
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-light text-danger fw-bold w-50">
                                 {{ __('Register') }}
                             </button>
                         </div>
