@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 
 use App\Models\Apartment;
@@ -16,6 +17,10 @@ class ApartmentController extends Controller
      */
     public function index()
     {
+
+        $apartments = User::find(1)->apartments()->get();
+        dd($apartments);
+
         return view('apartments.index');
     }
 
