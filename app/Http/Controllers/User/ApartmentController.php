@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules\Exists;
+
 
 
 use App\Models\Apartment;
@@ -18,10 +21,11 @@ class ApartmentController extends Controller
     public function index()
     {
 
-        $apartments = User::find(1)->apartments()->get();
-        dd($apartments);
+        $apartments = Apartment::orderByDesc('id')->get();
+        $apartments = Apartment::all();
+        
 
-        return view('apartments.index');
+        return view('apartments.index', compact('apartments'));
     }
 
     /**
@@ -31,7 +35,7 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('apartments.create');
     }
 
     /**
@@ -42,7 +46,21 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $data = $request->all();
+        $data['user_id'] = Auth::id();
+
+        Apartment::create($data);
+
+
+        // $data = $request->validated();
+        // $data['user_id'] = Auth::id();
+
+        
+        // $new_apartment = Apartment::create($data);
+
+
+        return redirect()->route('user.apartments.index');
     }
 
     /**

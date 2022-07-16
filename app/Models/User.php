@@ -15,7 +15,7 @@ class User extends Authenticatable
 
     public function apartments():HasMany
     {
-        return $this->hasMany('App\Models\Apartment');
+        return $this->hasMany(Apartment::class);
     }
 
     /**

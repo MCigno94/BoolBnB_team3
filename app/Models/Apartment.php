@@ -10,11 +10,12 @@ class Apartment extends Model
 
     public function user():BelongsTo
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo(User::class);
     }
     
 
     protected $fillable = [
+        'user_id',
         'title', 
         'description', 
         'daily_price',

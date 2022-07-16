@@ -16,6 +16,7 @@ class ApartmentSeeder extends Seeder
 
         foreach($apartments as $apartment){
             $new_apartment = new Apartment();
+            $new_apartment->user_id = $apartment['user_id'];
             $new_apartment->title = $apartment['title'];
             $new_apartment->description = $apartment['description'];
             $new_apartment->daily_price = $apartment['daily_price'];
