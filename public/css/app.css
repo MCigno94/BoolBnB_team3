@@ -19992,6 +19992,32 @@ main .card {
   margin: 10px;
 }
 
+footer {
+  background-color: #f7f7f7;
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.ms-list-group {
+  list-style: none;
+  font-size: 13px;
+  color: #4A4B4B;
+}
+
+.ms-list-group a {
+  text-decoration: none;
+  color: #4A4B4B;
+  transition: all 0.2s;
+}
+
+.ms-list-group a:hover {
+  color: rgb(255, 90, 95);
+  text-decoration: underline;
+}
+
+.ms-list-group a i:hover {
+  color: rgb(255, 90, 95);
+}
+
 .form-check-input:checked {
   background-color: #fcd0d2 !important;
   border: #fd333a !important;

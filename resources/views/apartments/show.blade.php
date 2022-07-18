@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')  
+@section('content')
 <section class="container my-3">
 
     <!-- NAV ARROWS -->
@@ -17,14 +17,14 @@
     <!-- BUTTONS -->
     <div class="d-flex align-items-center justify-content-between">
         <div class="visibility">
-            @if ($apartment->visibility) 
-                {{-- <i class="fas fa-circle mr-2"></i> --}}
-                <span class="mx-3"><i style="color: green" class="fas fa-circle mx-2"></i>Visible</span>
+            @if ($apartment->visibility)
+            {{-- <i class="fas fa-circle mr-2"></i> --}}
+            <span class="mx-3"><i style="color: green" class="fas fa-circle mx-2"></i>Visible</span>
             @else
-                <span class="mx-3"><i style="color: red" class="fas fa-circle mx-2"></i> Not Visible</span>
+            <span class="mx-3"><i style="color: red" class="fas fa-circle mx-2"></i> Not Visible</span>
             @endif
         </div>
-        
+
         <div class="buttons d-flex gap-2">
             <div class="button">
                 <a class="btn btn-light" href="{{route('user.apartments.edit', $apartment->id)}}">
@@ -35,13 +35,13 @@
                 @csrf
                 @method('DELETE')
 
-                    <button class="btn" type="submit">
-                        <i class="fa-solid fa-trash pe-2 text-danger"></i>Delete
-                    </button>
+                <button class="btn" type="submit">
+                    <i class="fa-solid fa-trash pe-2 text-danger"></i>Delete
+                </button>
 
             </form>
         </div>
     </div>
-        <h1 class="mr-2">{{ $apartment->title }}</h1>
+    <h1 class="mr-2">{{ $apartment->title }}</h1>
 </section>
 @endsection
