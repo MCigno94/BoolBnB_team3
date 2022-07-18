@@ -15,6 +15,8 @@ class CreateApartmentsTable extends Migration
     {
         Schema::create('apartments', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('title', 255);
             $table->text('description')->nullable();
             $table->decimal('daily_price', 8, 2);
@@ -23,7 +25,7 @@ class CreateApartmentsTable extends Migration
             $table->tinyInteger('beds_number')->nullable();
             $table->tinyInteger('bathrooms_number')->nullable();
             $table->text('image');
-            $table->boolean('visibility');
+            $table->boolean('visibility')->nullable();
             $table->string('address', 255)->nullable();    //->unique()
             $table->smallInteger('longitude')->nullable();  //->unique()
             $table->smallInteger('latitude')->nullable();   //->unique()

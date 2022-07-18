@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
@@ -53,69 +51,39 @@
             </div>
         </div>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <h3>Inbox</h3>
-            <hr>
-            <div class="table-responsive">
-                <table class="table table-dark">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">From</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Message</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>10/07/22</td>
-                            <td>I want book your apartment...</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>John</td>
-                            <td>10/07/22</td>
-                            <td>I want book your apartment...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3>Booking</h3>
-            <hr>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">#184382</h5>
-                            <p>Start date</p>
-                            <p>End date</p>
-                            <p class="card-text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
-                                mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
-                    </div>
+        <h3>Apartments</h3>
+        <hr>
+        <div class="add_apartment pb-4">
+                <div class="button">
+                        <a class="btn btn-primary text-white" href="{{route('user.apartments.create')}}" role="button">Add New Apartment</a>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">#184382</h5>
-                            <p>Start date</p>
-                            <p>End date</p>
-                            <p class="card-text">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
-                                mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-                            <a href="#" class="btn btn-danger">Delete</a>
+        </div>
+        <div class="d-flex flex-wrap gap-4">
+                @foreach($apartments as $apartment)
+                <div class="card">
+                <img class="card-img-top" src="{{$apartment->image}}" alt="un immagine bella bella" style="height: 200px">
+                <div class="card-body">
+                        <h2>{{$apartment->title}}</h2>
+                        <p>{{$apartment->description}}</p>
+                        <div>{{$apartment->daily_price}}</div>
+                
+                        <div class="buttons d-flex justify-content-between">
+                                <a class="btn btn-primary" href="{{route('user.apartments.show',$apartment->id)}}">Views</a>
+                                <a class="btn btn-secondary" href="{{route('user.apartments.edit',$apartment->id)}}">Edit</a>
+
+                                <form action="{{route('user.apartments.destroy',$apartment->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+
+                                <button class="btn btn-danger" type="submit">Delete</button>
+                                </form>
                         </div>
-                    </div>
                 </div>
-            </div>
-
-           
-
+                
+        </div>
+        @endforeach
+        </div>
         </main>
     </div>
 </div>
-
-
 @endsection

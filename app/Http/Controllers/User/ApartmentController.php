@@ -1,6 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
+use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules\Exists;
+
+
 
 use App\Models\Apartment;
 use Illuminate\Http\Request;
@@ -14,7 +20,12 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $apartments = Apartment::orderByDesc('id')->get();
+        $apartments = Apartment::all();
+        
+
+        return view('apartments.index', compact('apartments'));
     }
 
     /**
@@ -24,7 +35,7 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('apartments.create');
     }
 
     /**
@@ -35,7 +46,21 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $data = $request->all();
+        $data['user_id'] = Auth::id();
+
+        Apartment::create($data);
+
+
+        // $data = $request->validated();
+        // $data['user_id'] = Auth::id();
+
+        
+        // $new_apartment = Apartment::create($data);
+
+
+        return redirect()->route('user.apartments.index');
     }
 
     /**
@@ -46,7 +71,7 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
-        //
+        return view('apartments.show', compact('apartment'));
     }
 
     /**
@@ -57,7 +82,7 @@ class ApartmentController extends Controller
      */
     public function edit(Apartment $apartment)
     {
-        //
+        return view('apartments.edit', compact('apartment'));
     }
 
     /**
@@ -69,7 +94,10 @@ class ApartmentController extends Controller
      */
     public function update(Request $request, Apartment $apartment)
     {
-        //
+        $data = $request->all();
+        $apartment->update($data);
+
+        return redirect()->route('user.apartments.index');
     }
 
     /**
@@ -80,6 +108,7 @@ class ApartmentController extends Controller
      */
     public function destroy(Apartment $apartment)
     {
-        //
+        $apartment->delete();
+        return redirect()->route('user.apartments.index');
     }
 }
