@@ -51,9 +51,9 @@
             </div>
         </div>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <h3>Apartments</h3>
-                <hr>
-                <div class="add_apartment">
+        <h3>Apartments</h3>
+        <hr>
+        <div class="add_apartment pb-4">
                 <div class="button">
                         <a class="btn btn-primary text-white" href="{{route('user.apartments.create')}}" role="button">Add New Apartment</a>
                 </div>

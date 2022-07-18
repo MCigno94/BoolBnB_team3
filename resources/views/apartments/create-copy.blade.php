@@ -1,35 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container ct-form bg-white bg-md-gray">
-    <div class="row row-cols-1 row-cols-md-2 h-100 align-items-center justify-content-center">
-        <div class="col d-none d-md-block">
-            <div class="logo text-center">
-                <div>
-                    <img src="{{asset('img/logo.png')}}" alt="">
-                </div>
-                <div class="logo-text display-3 text-danger">
-                    BoolBnB
-                </div>
-            </div>
-        </div>
-        <div class="form col bg-danger d-flex align-items-center justify-content-center">
-            <div class="text-white">
-            <form  action="{{route('user.apartments.store')}}" class="ms-4" method="post">
+    <form  action="{{route('user.apartments.store')}}" class="ms-4" method="post">
         @csrf
 
 
-        <div class="form-group row title m-0 py-1">
-            <label class="col-form-label text-md-right p-0" for="title">Titolo</label>
-            <input class="form-control" type="text" name="title" id="title">
+        <div class="title">
+            <label for="title">Titolo</label>
+            <input type="text" name="title" id="title" placeholder="titolo dell'annuncio">
         </div>
 
-
-        <div class="form-group row image m-0 py-1">
-            <label class="col-form-label text-md-right p-0" for="image">Immagine dell'apartamento</label>
-            <input class="form-control" type="text" name="image" id="image">
+        <div class="image">
+            <label for="image">Immagine dell'apartamento</label>
+            <input type="text" name="image" id="image" placeholder="htttp//url">
         </div>
-
 
         <div class="description">
             <label for="description">Descrizione</label>
@@ -86,8 +70,4 @@
 
         <button type="submit">invia</button>
     </form>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
