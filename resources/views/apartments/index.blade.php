@@ -4,7 +4,7 @@
 
         <div class="add_apartment">
                 <div class="button">
-                        <a class="btn btn-primary" href="{{route('user.apartments.create')}}" role="button">Create New Post</a>
+                        <a class="btn btn-primary text-white" href="{{route('user.apartments.create')}}" role="button">Add New Apartment</a>
                 </div>
         </div>
         @foreach($apartments as $apartment)

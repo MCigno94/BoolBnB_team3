@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     //$ads = config('db.ads');
     //dd($ads);
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
