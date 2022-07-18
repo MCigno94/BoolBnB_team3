@@ -17,13 +17,12 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     //$ads = config('db.ads');
     //dd($ads);
-    return view('home');
+    return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 
 
 Route::middleware('auth')
@@ -33,5 +32,4 @@ Route::middleware('auth')
 ->group(function ()
 {
     Route::resource('/apartments','ApartmentController');
-
 });
