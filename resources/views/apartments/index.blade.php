@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+        <div class="add_apartment">
+                <div class="button">
+                        <a class="btn btn-primary" href="{{route('user.apartments.create')}}" role="button">Create New Post</a>
+                </div>
+        </div>
         @foreach($apartments as $apartment)
                 <h2>{{$apartment->title}}</h2>
                 <img src="{{$apartment->image}}" alt="un immagine bella bella">

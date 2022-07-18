@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <form  action="{{route('user.apartments.store')}}" class="ms-2" method="post">
+    <form  action="{{route('user.apartments.store')}}" class="ms-4" method="post">
         @csrf
 
 
@@ -68,6 +68,6 @@
             <input type="number" name="latitude" id="latitude">
         </div>
 
-        <button type="submit">invia testa di cazzo</button>
+        <button type="submit">invia</button>
     </form>
 @endsection
