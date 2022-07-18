@@ -13,79 +13,86 @@
                 </div>
             </div>
         </div>
-        <div class="form col bg-danger d-flex align-items-center justify-content-center">
+        <div class="form col bg-danger d-flex align-items-center justify-content-center py-5">
             <div class="text-white">
-            <form  action="{{route('user.apartments.store')}}" class="ms-4" method="post">
-        @csrf
+                <form action="{{route('user.apartments.store')}}" method="post">
+                    @csrf
+                    
+                    <h2 class="text-center display-4 pb-4">Add new apartment</h2>
+                    <!-- TITLE -->
+                    <div class="form-group row title m-0 py-1">
+                        <label class="col-form-label px-0" for="title">Title</label>
+                        <input class="form-control" type="text" name="title" id="title">
+                    </div>
 
+                    <!-- ADDRESS -->
+                    <div class="form-group row image m-0 py-1">
+                        <label class="col-form-label px-0" for="address">Address</label>
+                        <input class="form-control" type="text" name="address" id="address">
+                    </div>
+            
+                    <!-- IMAGE -->
+                    <div class="form-group row image m-0 py-1">
+                        <label class="col-form-label px-0" for="image">Image</label>
+                        <input class="form-control" type="file" name="image" id="image">
+                    </div>
+            
+                    <!-- DESCRIPTION -->
+                    <div class="form-group row m-0 description">
+                        <label class="col-form-label px-0" for="description">Description</label>
+                        <textarea name="description" id="description" cols="" rows="4" placeholder="Describe your apartment"></textarea>
+                    </div>
 
-        <div class="form-group row title m-0 py-1">
-            <label class="col-form-label text-md-right p-0" for="title">Titolo</label>
-            <input class="form-control" type="text" name="title" id="title">
-        </div>
+                    <div class="d-flex gap-4">
+                        <!-- MQ -->
+                        <div class="form-group row image m-0 py-1 w-50">
+                            <label class="col-form-label px-0" for="square_meters">MQ</label>
+                            <input class="form-control" type="number" name="square_meters" id="square_meters">
+                        </div>
+                        
+                        <!-- ROOMS -->
+                        <div class="form-group row image m-0 py-1 w-50">
+                            <label class="col-form-label px-0" for="rooms_number">Rooms</label>
+                            <input class="form-control" type="number" name="rooms_number" id="rooms_number">
+                        </div>
+                    </div>
 
+                    <div class="d-flex gap-4">
+                        <!-- BEDS -->
+                        <div class="form-group row image m-0 py-1 w-50">
+                            <label class="col-form-label px-0" for="beds_number">Beds</label>
+                            <input class="form-control" type="number" name="beds_number" id="beds_number">
+                        </div>
+                        
+                        <!-- BATHROOMS -->
+                        <div class="form-group row image m-0 py-1 w-50">
+                            <label class="col-form-label px-0" for="bathrooms_number">Bathrooms</label>
+                            <input class="form-control" type="number" name="bathrooms_number" id="bathrooms_number">
+                        </div>
+                    </div>
+            
+                    <div class="d-flex align-items-center">
+                        <!-- DAILY PRICE -->
+                        <div class="form-group row image m-0 py-1 w-50 pe-3">
+                            <label class="col-form-label px-0" for="daily_price">Daily price</label>
+                            <input class="form-control" type="number" name="daily_price" id="daily_price">
+                        </div>
 
-        <div class="form-group row image m-0 py-1">
-            <label class="col-form-label text-md-right p-0" for="image">Immagine dell'apartamento</label>
-            <input class="form-control" type="text" name="image" id="image">
-        </div>
+                        <!-- VISIBILITY -->
+                        <div class="visibility d-flex gap-2 align ps-4 align-self-end mb-2">
+                            <div class="form-check form-switch mb-1">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" style="transform: scale(1.75)">
+                                <label class="form-check-label ms-3" for="flexSwitchCheckChecked">Make visible</label>
+                            </div>
+                        </div>
+                    </div>
 
-
-        <div class="description">
-            <label for="description">Descrizione</label>
-            <textarea name="description" id="description" cols="30" rows="10" placeholder="inserisci qui la descrizione dell'apartamento"></textarea>
-        </div>
-
-        <div class="daily_price">
-            <label for="daily_price">Prezzo giornaliero</label>
-            <input type="number" name="daily_price" id="daily_price">
-        </div>
-
-        <div class="square_meters">
-            <label for="square_meters">Metri quadri dell'appartamento </label>
-            <input type="number" name="square_meters" id="square_meters">
-        </div>
-
-        <div class="rooms_number">
-            <label for="rooms_number">Numero di camere </label>
-            <input type="number" name="rooms_number" id="rooms_number">
-        </div>
-
-        <div class="beds_number">
-            <label for="beds_number">Numero letti </label>
-            <input type="number" name="beds_number" id="beds_number">
-        </div>
-
-        <div class="bathrooms_number">
-            <label for="bathrooms_number">Numero bagni </label>
-            <input type="number" name="bathrooms_number" id="bathrooms_number">
-        </div>
-
-        <div class="visibility">
-            <p>vuoi che l'annuncio sia visibile</p>
-            <label for="si"> si</label>
-            <input type="radio" name="visibility" id="si" value="true">
-            <label for="no"> no</label>
-            <input type="radio" name="visibility" id="no" value="false">
-        </div>
-
-        <div class="address">
-            <label for="address">Indirizzo</label>
-            <input type="text" name="address" id="address" placeholder="indirizzo">
-        </div>
-
-        <div class="longitude">
-            <label for="longitude">Longitudine </label>
-            <input type="number" name="longitude" id="longitude">
-        </div>
-
-        <div class="latitude">
-            <label for="latitude">Latitudine </label>
-            <input type="number" name="latitude" id="latitude">
-        </div>
-
-        <button type="submit">invia</button>
-    </form>
+                    <!-- BUTTON -->
+                    <div class="button pt-5">
+                        <button class="btn btn-light fw-bold w-25" type="submit">POST</button>
+                    </div>
+                    
+                </form>
             </div>
         </div>
     </div>
