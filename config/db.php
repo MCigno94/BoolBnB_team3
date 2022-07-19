@@ -4,6 +4,7 @@ return [
     "apartments" => 
     [
         [
+            "user_id" => 1,
             "title" => 'Titolo 1',
             "description" => 'Description 1',
             "daily_price" => '150',
@@ -18,6 +19,7 @@ return [
             "latitude" => '1500',
         ],
         [
+            "user_id" => 1,
             "title" => 'Titolo 2',
             "description" => 'Description 2',
             "daily_price" => '250',
@@ -32,6 +34,7 @@ return [
             "latitude" => '2500',
         ],
         [
+            "user_id" => 1,
             "title" => 'Titolo 3',
             "description" => 'Description 3',
             "daily_price" => '350',
@@ -46,6 +49,7 @@ return [
             "latitude" => '3500',
         ],
         [
+            "user_id" => 1,
             "title" => 'Titolo 4',
             "description" => 'Description 4',
             "daily_price" => '450',
@@ -60,6 +64,7 @@ return [
             "latitude" => '4500',
         ],
         [
+            "user_id" => 1,
             "title" => 'Titolo 5',
             "description" => 'Description 5',
             "daily_price" => '550',
@@ -74,6 +79,7 @@ return [
             "latitude" => '5500',
         ],
         [
+            "user_id" => 1,
             "title" => 'Titolo 6',
             "description" => 'Description 6',
             "daily_price" => '660',
@@ -88,6 +94,7 @@ return [
             "latitude" => '6600',
         ],
         [
+            "user_id" => 1,
             "title" => 'Titolo 7',
             "description" => 'Description 7',
             "daily_price" => '770',
@@ -102,6 +109,7 @@ return [
             "latitude" => '7600',
         ],
         [
+            "user_id" => 1,
             "title" => 'Titolo 8',
             "description" => 'Description 8',
             "daily_price" => '880',
